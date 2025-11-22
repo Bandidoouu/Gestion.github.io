@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Reporte de Inventario</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+</head>
+<body data-page="reporte-inventario">
+<div class="main-wrapper">
+    <div class="card">
+        <h1 class="titulo-pagina">Reporte de Inventario</h1>
+
+        <form id="form-reporte-inventario" class="form-vertical form-corto">
+            <label>
+                <span>Stock menor o igual a:</span>
+                <input type="number" id="stock-maximo" required>
+            </label>
+
+            <button type="submit" class="btn btn-primary">Filtrar</button>
+        </form>
+
+        <div class="tabla-contenedor">
+            <table>
+                <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Cantidad</th>
+                </tr>
+                </thead>
+                <tbody id="tabla-reporte-inventario">
+                <!-- Se usara una base de datos aqui, programala flojo -->
+                </tbody>
+            </table>
+        </div>
+
+        <div class="zona-volver">
+            <a href="panel.html" class="btn btn-outline">Volver</a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

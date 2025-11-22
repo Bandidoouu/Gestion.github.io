@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Panel del Administrador</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+</head>
+<body data-page="panel">
+<div class="main-wrapper">
+    <div class="card">
+        <div class="panel-titulo">
+            <h1 class="titulo-pagina bg-azul-claro">Panel del Administrador</h1>
+        </div>
+
+        <p class="sesion-actual">
+            Sesión iniciada como: <span id="nombre-usuario"></span>
+        </p>
+
+        <div class="fila-botones">
+            <a class="btn btn-outline" href="inventario.html">Manejo del inventario</a>
+            <a class="btn btn-outline" href="empleados.html">Registro de Empleados</a>
+            <a class="btn btn-outline" href="reporte_ventas.html">Reporte de Ventas</a>
+        </div>
+
+        <div class="fila-botones">
+            <a class="btn btn-outline" href="reporte_inventario.html">Reporte de Inventario</a>
+            <button id="btn-logout" class="btn btn-outline btn-rojo">Cerrar Sesión</button>
+        </div>
+    </div>
+</div>
+</body>
+</html>

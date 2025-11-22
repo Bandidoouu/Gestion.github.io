@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Registro de Empleados</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+</head>
+<body data-page="empleados">
+<div class="main-wrapper">
+    <div class="card">
+        <h1 class="titulo-pagina">Registro de Empleados</h1>
+
+        <form id="form-empleado" class="form-vertical">
+            <label>
+                <span>ID Empleado:</span>
+                <input type="text" id="empleado-id" required>
+            </label>
+
+            <label>
+                <span>Nombre:</span>
+                <input type="text" id="empleado-nombre" required>
+            </label>
+
+            <label>
+                <span>Puesto:</span>
+                <input type="text" id="empleado-puesto" required>
+            </label>
+
+            <button type="submit" class="btn btn-primary">Registrar empleado</button>
+        </form>
+
+        <h2 class="subtitulo">Empleados Registrados</h2>
+
+        <div class="tabla-contenedor">
+            <table>
+                <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Puesto</th>
+                </tr>
+                </thead>
+                <tbody id="tabla-empleados">
+                <!-- Se llena con JS -->
+                </tbody>
+            </table>
+        </div>
+
+        <div class="zona-volver">
+            <a href="panel.html" class="btn btn-outline">Volver</a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

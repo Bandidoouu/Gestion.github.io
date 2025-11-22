@@ -1,0 +1,300 @@
+/* ===========================
+   Variables de estilo
+   =========================== */
+:root {
+    --color-bg: #f3f4f7;
+    --color-card-bg: #ffffff;
+    --color-primary: #1e4b7a;
+    --color-primary-soft: #e4edf7;
+    --color-border: #d1d5e2;
+    --color-text-main: #1f2933;
+    --color-text-soft: #6b7280;
+    --color-danger: #c0392b;
+    --radius-card: 28px;
+    --radius-input: 8px;
+    --radius-btn: 999px;
+    --shadow-soft: 0 18px 40px rgba(15, 23, 42, 0.18);
+    --transition-fast: 0.16s ease-out;
+}
+
+/* ===========================
+   Layout base
+   =========================== */
+
+body {
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    background: radial-gradient(circle at top left, #e0ebff 0, #f3f4f7 40%, #eef0f5 100%);
+    color: var(--color-text-main);
+    margin: 0;
+}
+
+.main-wrapper {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2.5rem 1.25rem;
+}
+
+/* ===========================
+   Tarjeta principal
+   =========================== */
+
+.card {
+    background: var(--color-card-bg);
+    border-radius: var(--radius-card);
+    border: 1px solid rgba(148, 163, 184, 0.4);
+    padding: 2.4rem 3rem;
+    width: min(780px, 100%);
+    box-shadow: var(--shadow-soft);
+    position: relative;
+}
+
+/* pequeña barra de acento arriba */
+.card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    top: -2px;
+    height: 4px;
+    border-radius: 999px;
+    background: linear-gradient(90deg, #2563eb, #0891b2);
+    opacity: 0.95;
+}
+
+/* ===========================
+   Tipografía
+   =========================== */
+
+.titulo-pagina {
+    text-align: center;
+    margin: 0 0 1.8rem 0;
+    font-size: 1.8rem;
+    letter-spacing: 0.03em;
+    color: var(--color-primary);
+}
+
+.bg-azul-claro {
+    background: var(--color-primary-soft);
+    padding: 0.6rem 1rem;
+    border-radius: 10px;
+    border: 1px solid rgba(148, 163, 184, 0.7);
+}
+
+.subtitulo {
+    margin-top: 2.1rem;
+    margin-bottom: 0.8rem;
+    font-size: 1.15rem;
+}
+
+.sesion-actual {
+    text-align: center;
+    font-size: 0.92rem;
+    color: var(--color-text-soft);
+    margin-bottom: 1.5rem;
+}
+
+/* ===========================
+   Formularios / Inputs
+   =========================== */
+
+.form-vertical {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.form-vertical label span {
+    display: block;
+    margin-bottom: 0.2rem;
+    font-size: 0.9rem;
+    color: var(--color-text-soft);
+}
+
+input[type="text"],
+input[type="password"],
+input[type="number"] {
+    width: 100%;
+    padding: 0.55rem 0.8rem;
+    border-radius: var(--radius-input);
+    border: 1px solid var(--color-border);
+    font-size: 0.96rem;
+    background: #f9fafb;
+    transition: border-color var(--transition-fast),
+                box-shadow var(--transition-fast),
+                background var(--transition-fast),
+                transform 0.05s ease-out;
+}
+
+input:focus {
+    outline: none;
+    border-color: #2563eb;
+    background: #ffffff;
+    box-shadow: 0 0 0 1px rgba(37, 99, 235, 0.35),
+                0 8px 18px rgba(15, 23, 42, 0.12);
+    transform: translateY(-0.5px);
+}
+
+.form-corto {
+    max-width: 420px;
+}
+
+/* ===========================
+   Botones
+   =========================== */
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.35rem;
+    padding: 0.55rem 1.5rem;
+    border-radius: var(--radius-btn);
+    font-size: 0.94rem;
+    cursor: pointer;
+    border: 1px solid var(--color-primary);
+    background: #ffffff;
+    color: var(--color-primary);
+    text-decoration: none;
+    text-align: center;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    transition: background var(--transition-fast),
+                color var(--transition-fast),
+                box-shadow var(--transition-fast),
+                transform 0.08s ease-out;
+}
+
+.btn-primary {
+    background: var(--color-primary);
+    color: #ffffff;
+    border-color: transparent;
+}
+
+.btn-outline {
+    background: #ffffff;
+}
+
+.btn-rojo {
+    border-color: var(--color-danger);
+    color: var(--color-danger);
+}
+
+.btn:hover {
+    background: linear-gradient(90deg, #2563eb, #1d4ed8);
+    color: #ffffff;
+    box-shadow: 0 10px 22px rgba(30, 64, 175, 0.35);
+    transform: translateY(-1px);
+}
+
+.btn-primary:hover {
+    background: linear-gradient(90deg, #2563eb, #1d4ed8);
+}
+
+.btn-rojo:hover {
+    background: var(--color-danger);
+    box-shadow: 0 10px 22px rgba(192, 57, 43, 0.35);
+}
+
+/* Botones pequeños en tablas */
+.btn-tabla {
+    font-size: 0.78rem;
+    padding: 0.25rem 0.9rem;
+    border-radius: 999px;
+    border-width: 1px;
+}
+
+/* ===========================
+   Panel / Menú principal
+   =========================== */
+
+.panel-titulo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.4rem;
+}
+
+.fila-botones {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 0.9rem;
+    flex-wrap: wrap;
+}
+
+/* ===========================
+   Tablas
+   =========================== */
+
+.tabla-contenedor {
+    overflow-x: auto;
+    margin-top: 0.4rem;
+}
+
+.tabla-centro {
+    display: flex;
+    justify-content: center;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    min-width: 420px;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #ffffff;
+}
+
+th, td {
+    padding: 0.55rem 0.8rem;
+    border-bottom: 1px solid #e2e8f0;
+    font-size: 0.9rem;
+}
+
+th {
+    background: #e3eeff;
+    font-weight: 600;
+    text-align: left;
+}
+
+tr:nth-child(even) td {
+    background: #f9fafb;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+/* ===========================
+   Otros detalles
+   =========================== */
+
+.zona-volver {
+    margin-top: 1.7rem;
+}
+
+.ayuda-login {
+    margin-top: 1.4rem;
+    font-size: 0.85rem;
+    color: var(--color-text-soft);
+    text-align: center;
+}
+
+/* ===========================
+   Responsivo
+   =========================== */
+
+@media (max-width: 650px) {
+    .card {
+        padding: 1.7rem 1.5rem 2rem;
+        border-radius: 22px;
+    }
+
+    .titulo-pagina {
+        font-size: 1.5rem;
+    }
+
+    table {
+        min-width: 360px;
+    }
+}

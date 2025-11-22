@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Iniciar sesión</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+</head>
+<body data-page="login">
+<div class="main-wrapper">
+    <div class="card">
+        <h1 class="titulo-pagina">Iniciar Sesión</h1>
+
+        <form id="login-form" class="form-vertical">
+            <label>
+                <span>Usuario:</span>
+                <input type="text" id="usuario" required>
+            </label>
+
+            <label>
+                <span>Contraseña:</span>
+                <input type="password" id="contrasena" required>
+            </label>
+
+            <button type="submit" class="btn btn-primary">Entrar</button>
+        </form>
+
+        <p class="ayuda-login">
+            Usuarios de prueba:<br>
+            <strong>admin / 1234</strong><br>
+            <strong>empleado1 / abcd</strong>
+        </p>
+    </div>
+</div>
+</body>
+</html>
